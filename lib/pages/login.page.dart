@@ -1,6 +1,9 @@
 // ignore_for_file: prefer_const_constructors, deprecated_member_use, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:shopping/pages/signup.page.dart';
+
+import 'home.page.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -48,7 +51,13 @@ class LoginPage extends StatelessWidget {
                               ],
                             ),
                             FlatButton(
-                                onPressed: () {}, child: Text("Sign up")),
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => SignupPage()));
+                                },
+                                child: Text("Sign up")),
                           ]),
                       SizedBox(
                         height: 20,
@@ -102,7 +111,13 @@ class LoginPage extends StatelessWidget {
                             color: Colors.blue,
                             borderRadius: BorderRadius.all(Radius.circular(5))),
                         child: FlatButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => HomePage()),
+                            );
+                          },
                           child: Text(
                             "Sign in",
                             style: TextStyle(color: Colors.white),
