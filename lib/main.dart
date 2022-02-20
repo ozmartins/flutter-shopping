@@ -1,5 +1,7 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
-import 'package:shopping/pages/login.page.dart';
+import 'pages/tabs.page.dart';
 
 void main() => runApp(MyApp());
 
@@ -14,7 +16,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LoginPage(),
+      home: DefaultTabController(
+        length: 3,
+        child: TabsPage(),
+      ),
     );
   }
 }
