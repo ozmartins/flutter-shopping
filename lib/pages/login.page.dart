@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, deprecated_member_use, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:shopping/pages/cart.page.dart';
 import 'package:shopping/pages/signup.page.dart';
 
 import 'home.page.dart';
@@ -111,13 +112,7 @@ class LoginPage extends StatelessWidget {
                             color: Colors.blue,
                             borderRadius: BorderRadius.all(Radius.circular(5))),
                         child: FlatButton(
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => HomePage()),
-                            );
-                          },
+                          onPressed: () {},
                           child: Text(
                             "Sign in",
                             style: TextStyle(color: Colors.white),
