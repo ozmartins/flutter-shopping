@@ -58,7 +58,7 @@ class HomePage extends StatelessWidget {
               height: 30,
             ),
             Container(
-              height: 350,
+              height: 300,
               child: productList(context),
             ),
           ],
@@ -188,7 +188,7 @@ Widget productItem(BuildContext context) {
           height: 10,
         ),
         Container(
-          height: 60,
+          height: 40,
           child: Text(
             "Título do produto",
             style: TextStyle(
