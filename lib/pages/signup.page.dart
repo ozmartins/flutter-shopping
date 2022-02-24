@@ -103,10 +103,7 @@ class SignupPage extends StatelessWidget {
                             borderRadius: BorderRadius.all(Radius.circular(5))),
                         child: FlatButton(
                           onPressed: () {},
-                          child: Text(
-                            "Sign up",
-                            style: TextStyle(color: Colors.white),
-                          ),
+                          child: Text("Sign up"),
                         ),
                       ),
                     ],

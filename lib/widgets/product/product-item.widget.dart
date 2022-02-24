@@ -5,8 +5,19 @@ import 'package:shopping/pages/product.page.dart';
 
 class ProductItem extends StatelessWidget {
   final String image;
+  final String name;
+  final String brand;
+  final String description;
+  final String price;
 
-  const ProductItem({Key? key, required this.image}) : super(key: key);
+  const ProductItem(
+      {Key? key,
+      required this.image,
+      required this.name,
+      required this.brand,
+      required this.description,
+      required this.price})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +34,13 @@ class ProductItem extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => ProductPage(),
+                  builder: (context) => ProductPage(
+                    key: key,
+                    image: image,
+                    name: name,
+                    brand: brand,
+                    description: description,
+                  ),
                 ),
               );
             },
@@ -40,7 +57,7 @@ class ProductItem extends StatelessWidget {
           Container(
             height: 40,
             child: Text(
-              "Título do produto",
+              name,
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.w300,
@@ -51,7 +68,7 @@ class ProductItem extends StatelessWidget {
             height: 5,
           ),
           Text(
-            "Marca",
+            brand,
             style: TextStyle(
               fontSize: 14,
               fontWeight: FontWeight.w300,
@@ -61,7 +78,7 @@ class ProductItem extends StatelessWidget {
             height: 5,
           ),
           Text(
-            "\$ 200",
+            "\$ $price",
             style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
