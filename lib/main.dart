@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:shopping/themes/light.theme.dart';
 import 'pages/tabs.page.dart';
+import 'themes/dark.theme.dart';
 
 void main() => runApp(MyApp());
 
